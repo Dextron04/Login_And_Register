@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <unistd.h>
 
 using namespace std;
 
@@ -9,8 +10,10 @@ bool isLoggedIN(){
 
        cout << "Enter Username: ";
        cin >> username;
+       sleep(2);
        cout << "Enter Password: ";
        cin >> password;
+       sleep(2);
 
        ifstream read("data\\" + username + ".txt");
        getline(read, un);
@@ -36,12 +39,19 @@ int main(){
                      return 0;
               } else {
                      cout << "Please wait a moment.....";
+                     sleep(1);
                      cout <<  "." << endl;
+                     sleep(1);
                      cout <<  "." << endl;
+                     sleep(1);
                      cout <<  "." << endl;
+                     sleep(1);
                      cout <<  "." << endl;
+                     sleep(1);
                      cout <<  "." << endl;
+                     sleep(1);
                      cout <<  "." << endl;
+                     sleep(1);
                      cout << "Successfully Logged in!!";
                      return 0;
                                    }
@@ -50,8 +60,10 @@ int main(){
               string password;
               cout << "Select a username: ";
               cin >> username;
+              sleep(2);
               cout << "Select a password: ";
               cin >> password;
+              sleep(2);
 
               ofstream file;
               file.open("data\\" + username + ".txt");
